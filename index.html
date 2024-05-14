@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #main_contanier {
+
+        width: 100%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+       
+      }
+      #main_contanier div {
+
+        
+        padding: 20px;
+        margin: 20px;
+        text-align: center;
+        border-radius: 40px 15px 30px 10px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      }
+
+
+      #main_contanier div:nth-child(odd){
+        
+        background-color: rgb(229, 233, 221);
+        transition: all 3s;
+      }
+      #main_contanier div:nth-child(odd):hover{
+         width: auto;
+         background-color: rgb(209, 235, 235);
+         cursor: pointer;
+         scale: 1.1;
+         overflow: hidden;
+         
+      }
+
+
+      #main_contanier div:nth-child(even){
+       
+        background-color: rgb(229, 233, 221);
+        transition: all 4s;
+      }
+      #main_contanier div:nth-child(even):hover{
+         width: auto;
+         background-color: rgb(232, 192, 150);
+         cursor: pointer;
+         scale: 1.1;
+         overflow: hidden;
+         
+      }
+
+      img {
+        border-radius: 10px 15px 30px 10px;
+        height: 300px;
+        width: 100%;
+        transition: all 5s;
+      }
+      img:hover{
+        cursor: pointer;
+         scale: 1.2;
+         overflow: hidden;
+      }
+
+      @media screen and (min-width: 200px) and (max-width: 757px){
+        #main_contanier{
+            width: 100%;
+       
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+      }}
+
+      @media screen and (min-width: 758px) and (max-width: 1024px){
+        #main_contanier{
+            width: 100%;
+       
+       display:grid;
+       grid-template-columns: repeat(2,1fr);
+       }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main_contanier"></div>
+  </body>
+  <script>
+    let arry = [
+      {
+        name: "ram",
+        mobile: 7062852770,
+        age: 12,
+        img: "  https://images.pexels.com/photos/36762/scarlet-honeyeater-bird-red-feathers.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1     ",
+      },
+      {
+        name: "Radha",
+        mobile: 7062852770,
+        age: 21,
+        img: "https://images.pexels.com/photos/1658967/pexels-photo-1658967.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      },
+      {
+        name: "Raju",
+        mobile: 7062852770,
+        age: 22,
+        img: "https://images.pexels.com/photos/33045/lion-wild-africa-african.jpg?auto=compress&cs=tinysrgb&w=600",
+      },
+      {
+        name: "Ramlal",
+        mobile: 7062852770,
+        age: 32,
+        img: "  https://images.pexels.com/photos/70741/cereals-field-ripe-poppy-70741.jpeg?auto=compress&cs=tinysrgb&w=600",
+      },
+      {
+        name: "Raju",
+        mobile: 7062852770,
+        age: 24,
+        img: "https://images.unsplash.com/photo-1506104489822-562ca25152fe?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8NGslMjBuYXR1cmV8ZW58MHx8MHx8fDA%3D",
+      },
+      {
+        name: "rani",
+        mobile: 7062852770,
+        age: 22,
+        img: " https://images.pexels.com/photos/225203/pexels-photo-225203.jpeg?auto=compress&cs=tinysrgb&w=600",
+      },
+      {
+        name: "Amar",
+        mobile: 7062852770,
+        age: 22,
+        img: " https://images.pexels.com/photos/1542495/pexels-photo-1542495.jpeg?auto=compress&cs=tinysrgb&w=600",
+      },
+      {
+        name: "Prem",
+        mobile: 7062852770,
+        age: 22,
+        img: "https://images.pexels.com/photos/33101/new-wing-emergency-at-the-moment.jpg?auto=compress&cs=tinysrgb&w=600 ",
+      },
+    ];
+
+    let main_contanier = document.getElementById("main_contanier");
+
+    function getdata() {
+      arry.map(function (user) {
+        let div = document.createElement("div");
+        let h1 = document.createElement("h1");
+        h1.innerText = user.name;
+        let image = document.createElement("img");
+        image.src = user.img;
+        div.append(image, h1);
+        main_contanier.append(div);
+        console.log(user);
+      });
+    }
+    getdata();
+  </script>
+</html>
