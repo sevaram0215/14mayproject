@@ -6,6 +6,9 @@
   text-align: center;
   font-size: 25px;
  }
+ input{
+  border-radius: 10px;
+ }
   #main_contanier {
         width: 100%;
         margin: auto;
