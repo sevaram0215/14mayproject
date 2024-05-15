@@ -1,4 +1,12 @@
- #main_contanier {
+ 
+ 
+ .main_div{
+  
+  background-color: rgb(114, 220, 239);
+  text-align: center;
+  font-size: 25px;
+ }
+  #main_contanier {
         width: 100%;
         margin: auto;
         display: grid;
